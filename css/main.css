@@ -146,7 +146,17 @@ align-items: center;
   fill: #f5e982;
 }
 
+.phonenumber {
+  display: block;
+}
+
+.phone-link {
+pointer-events: none;
+ cursor: default;
+}
+
 .mail-link {
+display: block;
   text-decoration: none;
   color: var(--text-dark);
 }
@@ -303,7 +313,7 @@ margin: 8% 10% auto 10%;
   width: auto;
   padding: 16px;
   margin-top: -22px;
-  color: red;
+  color: white;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -424,7 +434,7 @@ margin: 8% 10% auto 10%;
 @media screen and (max-width: 750px) {
   .tabbar a {
     padding-bottom: 5px;
-    font-size: 1.4em;
+    font-size: 1.1em;
   }
 
   .banner {
@@ -463,6 +473,11 @@ margin: 8% 10% auto 10%;
   #about-article h2 {
     display: none;
   }
+
+  .phone-link {
+  pointer-events: visible;
+   cursor: pointer;
+  }
 }
 
 @media screen and (max-width: 1120px) {
@@ -474,10 +489,43 @@ margin: 8% 10% auto 10%;
   }
   }
 
+  /* iphone 6 and down*/
+  @media screen and (max-width: 375px) {
+h1 {
+  top: 36vh;
+}
+
+#about-article {
+  align-items: center;
+}
+
+.about-icons-container {
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+    .phonenumber {
+      display: none;
+    }
+
+    .mail-link {
+      display: none;
+    }
+
+
+  }
+
 /* iphone 5 */
   @media screen and (max-width: 320px) {
     #about-article {
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
+    }
+
+    .tabbar {
+      bottom: 5px;
+    }
+    .tabbar a {
+      padding-bottom: 2px;
     }
     }
