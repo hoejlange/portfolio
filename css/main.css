@@ -302,7 +302,6 @@ padding-top: 43%;
   margin: 10% 0 0 auto;
   position: relative;
   overflow: hidden;
-  display: flex;
 }
 
 .mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6, .mySlides7 {
@@ -345,8 +344,8 @@ padding-top: 43%;
 h3 {
   font-size: 2em;
   font-weight: 300;
-  text-align: center;
   color: white;
+  text-align: center;
 }
 /* ---------- animations ---------- */
 /* fade in */
