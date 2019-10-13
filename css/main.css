@@ -20,6 +20,7 @@ html {
   height: 100%;
   width: 100%;
   font-weight: 200;
+
 }
 
 body {
@@ -31,12 +32,11 @@ body {
 
 h1 {
   font-family: "Abril Fatface";
-  font-size: 2.5em;
+  font-size: 2em;
   font-weight: 300;
   letter-spacing: 3px;
-  padding-left: 30px;
-  padding-top: 30px;
-  margin-top: auto;
+  padding-top: 0px;
+  margin-top: 0;
   margin-bottom: auto;
 }
 h2 {
@@ -94,40 +94,40 @@ h2 {
   max-height: 100vh;
 }
 
-.banner {
-margin: auto;
-  height: 300px;
-  width: 2115px;
+#banner {
+  height: 280px;
+  width: 2400px;
+  overflow: hidden;
   -webkit-animation: fadeIn 5s;
   animation: fadeIn 5s;
-  align-items: center;
+  top: 20px;
 }
 
-.banner-element {
-  float: left; 
-  height: 100%;
-  width: 300px;
+.banner-elements {
+  height: 280px;
+  width: 280px;
   text-align: center;
-  curser: pointer;
+  cursor: pointer;
   display: inline-block;
-
+  vertical-align: middle;
 }
+
 
 .first {
-  -webkit-animation: bannerMove 30s linear infinite;
-  animation: bannerMove 30s linear infinite;
+  -webkit-animation: bannerMove 50s linear infinite;
+  animation: bannerMove 50s linear infinite;
 }
 
 .banner-preview-img {
-width: 80%;
-transition: .5s ease;
-
+  max-width: 80%;
+  transition: .5s ease;
+  padding-top: 20%;
 }
 
 .banner-preview-gif {
-width: 40%;
-transition: .5s ease;
-
+  max-width: 40%;
+  transition: .5s ease;
+  padding-top: 10%;
 }
 
 .banner-preview-hover {
@@ -135,11 +135,11 @@ transition: .5s ease;
   margin: auto;
 }
 
-.banner-element:hover .banner-preview-hover {
+.banner-elements:hover .banner-preview-hover {
   display: inline-block;
 }
 
-.banner-element:hover .banner-preview-no-hover {
+.banner-elements:hover .banner-preview-no-hover {
   display: none;
 }
 
@@ -147,7 +147,7 @@ transition: .5s ease;
   font-family: "Abril fatface";
   color: var(--background);
   font-size: 1.5em;
-  padding-top: 43%;
+  padding-top: 30%;
   }
 
 .banner-preview-text:hover {
@@ -188,67 +188,8 @@ transition: .5s ease;
 }
 
 #about-article {
-  padding: 15% 10%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  width: 50%;
-}
-
-.about-icons-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.about-icons-element-container {
-  display: flex;
-  align-items: center;
-    }
-
-.about-icons {
-  width: 40px;
-  height: 40px;
-  padding-right: 10px;
-}
-
-.svg-icons {
-  width: 90%;
-  height: 90%;
-}
-
-.svg-icons:hover {
-  -webkit-animation: scale-up 0.1s ease-in both;
-  animation: scale-up 0.1s ease-in both;
-}
-
-#phone-icon, #mail-icon {
-    fill: var(--text-dark);
-}
-
-.phonenumber {
-  display: block;
-}
-
-.phone-link {
-  pointer-events: none;
-   cursor: default;
-}
-
-.mail-link {
-  display: block;
-  text-decoration: none;
-  color: var(--text-dark);
-}
-
-.mail-link:hover {
-  text-decoration: underline;
-}
-
-.banner-container {
-  width: 100vw;
-  overflow: hidden;
-  margin-top: 0;
+  text-align: center;
+  margin: 5% auto;
 }
 
 /*projects page styling*/
@@ -282,17 +223,18 @@ transition: .5s ease;
 }
 
 #projects-page-heading {
-  width: 100%;
+text-align: center;
   background-color: white;
-  position:fixed;
+  font-size: 2.5em;
+  padding-top: 5%;
+
 }
 
 /* Slideshow container */
 .slideshow-container {
   width: 70vw;
   height: 70vh;
-  float: right;
-  margin: 10% 0 0 auto;
+  margin: 5% auto;
   position: relative;
   overflow: hidden;
 }
@@ -400,7 +342,7 @@ h3 {
     margin-left: 0px;
  }
  100% {
-    margin-left: -2115px;
+    margin-left: -2400px;
  }
 }
 
@@ -409,81 +351,25 @@ h3 {
     margin-left: 0px;
  }
  100% {
-    margin-left: -2115px;
+    margin-left: -2400px;
  }
 }
 
 /* ---------- media querries ---------- */
 
 @media screen and (max-width: 750px) {
-
-  h1 {
-    top: 35vh;
-    font-size: 1.5em;
-    position: absolute;
-  }
-
-  #about-article {
-    top: 39vh;
-    width: 99vw;
-  }
-
-  #about-article h2 {
-    display: none;
-  }
-
-  .phone-link {
-  pointer-events: visible;
-   cursor: pointer;
-  }
 }
 
 @media screen and (max-width: 1120px) {
-  #about-article {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10% 10%;
-    width: 80%
-  }
+
   }
 
   /* iphone 6 and down*/
   @media screen and (max-width: 375px) {
-h1 {
-  top: 36vh;
+
 }
-
-#about-article {
-  align-items: center;
-}
-
-.about-icons-container {
-  flex-direction: row;
-  margin-top: 20px;
-}
-
-    .phonenumber {
-      display: none;
-    }
-
-    .mail-link {
-      display: none;
-    }
-
-
-  }
 
 /* iphone 5 */
   @media screen and (max-width: 320px) {
-    #about-article {
-      flex-direction: column;
-      align-items: center;
-    }
 
-    .tabbar {
-      bottom: 5px;
-    }
-    .tabbar a {
-      padding-bottom: 2px;
-    }
     }
