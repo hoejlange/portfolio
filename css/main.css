@@ -20,7 +20,6 @@ html {
   height: 100%;
   width: 100%;
   font-weight: 200;
-
 }
 
 body {
@@ -227,16 +226,36 @@ text-align: center;
   background-color: white;
   font-size: 2.5em;
   padding-top: 5%;
-
 }
 
 /* Slideshow container */
 .slideshow-container {
-  width: 70vw;
-  height: 70vh;
+  width: 90%;
+  height: 60%;
   margin: 5% auto;
   position: relative;
   overflow: hidden;
+  text-align: center;
+}
+
+/* ---------- content in slideshow ---------- */
+
+h3 {
+  font-size: 2em;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+}
+
+
+.slide-images {
+  max-width: 50%;
+}
+
+.slide-images-gif {
+  width: 20%;
+  max-height: 10%;
+padding: 5%;
 }
 
 .mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6, .mySlides7 {
@@ -259,6 +278,10 @@ text-align: center;
   border-radius: 0 3px 3px 0;
 }
 
+.prev {
+  left: 0;
+}
+
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
@@ -275,19 +298,6 @@ text-align: center;
   color: black;
 }
 
-
-/* ---------- content in slideshow ---------- */
-
-h3 {
-  font-size: 2em;
-  font-weight: 300;
-  color: white;
-  text-align: center;
-}
-
-.slide-images {
-  width: 50%;
-}
 /* ---------- animations ---------- */
 /* fade in */
 @keyframes fadeIn {
@@ -362,20 +372,15 @@ h3 {
 }
 
 /* ---------- media querries ---------- */
+/* tablet and down */
+@media screen and (max-width: 768px) {
 
-@media screen and (max-width: 750px) {
+
 }
 
-@media screen and (max-width: 1120px) {
-
+/* big screens */
+@media screen and (min-width: 1120px) {
+  .slideshow-container {
+    width: 60%;
   }
-
-  /* iphone 6 and down*/
-  @media screen and (max-width: 375px) {
-
-}
-
-/* iphone 5 */
-  @media screen and (max-width: 320px) {
-
-    }
+  }
