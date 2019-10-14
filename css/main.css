@@ -40,7 +40,7 @@ h1 {
   margin-bottom: auto;
 }
 h2 {
-  color: var(--text-light);
+  color: var(--text-dark);
   font-family: "Avenir Next";
     font-size: 1.5em;
     font-weight: 300;
@@ -275,11 +275,18 @@ text-align: center;
   color: black;
 }
 
+
+/* ---------- content in slideshow ---------- */
+
 h3 {
   font-size: 2em;
   font-weight: 300;
   color: white;
   text-align: center;
+}
+
+.slide-images {
+  width: 50%;
 }
 /* ---------- animations ---------- */
 /* fade in */
