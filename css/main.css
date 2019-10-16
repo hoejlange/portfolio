@@ -37,6 +37,7 @@ h1 {
   padding-top: 0px;
   margin-top: 0;
   margin-bottom: auto;
+    animation: scaleIn 2s;
 }
 h2 {
   color: var(--text-dark);
@@ -136,10 +137,12 @@ h2 {
 
 .banner-elements:hover .banner-preview-hover {
   display: inline-block;
+
 }
 
 .banner-elements:hover .banner-preview-no-hover {
   display: none;
+
 }
 
 .banner-preview-text {
@@ -150,7 +153,9 @@ h2 {
   }
 
 .banner-preview-text:hover {
-  font-size: 2.1em;
+  -webkit-animation: scale-up 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
 }
 
 
@@ -238,6 +243,13 @@ text-align: center;
   text-align: center;
 }
 
+/* this class is used for the animation */
+.slideup-animation {
+  -webkit-animation: slide-top-slideshow 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-top-slideshow 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+
+
 /* ---------- content in slideshow ---------- */
 
 h3 {
@@ -255,7 +267,7 @@ h3 {
 .slide-images-gif {
   width: 20%;
   max-height: 10%;
-padding: 5%;
+  padding: 5%;
 }
 
 .mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6, .mySlides7 {
@@ -299,7 +311,7 @@ padding: 5%;
 }
 
 /* ---------- animations ---------- */
-/* fade in */
+/* fade in .page */
 @keyframes fadeIn {
   from {
     opacity: 0
@@ -320,7 +332,22 @@ padding: 5%;
   }
 }
 
+/* scale in headlines */
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0)
+  }
 
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1)
+  }
+}
+
+/* scale up text on hover in banner */
 @-webkit-keyframes scale-up {
   0% {
     -webkit-transform: scale(1);
@@ -342,17 +369,7 @@ padding: 5%;
   }
 }
 
-@-webkit-keyframes navbar-slide {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(130px);
-            transform: translateX(130px);
-  }
-}
-
+/* make banner move on frontpage */
 @keyframes bannerMove {
  0% {
     margin-left: 0px;
@@ -369,6 +386,18 @@ padding: 5%;
  100% {
     margin-left: -2400px;
  }
+}
+
+/* slide up slideshow containers */
+@-webkit-keyframes slide-top-slideshow {
+  0% {
+    -webkit-transform: translateY(500px);
+            transform: translateY(500px);
+  }
+  100% {
+    -webkit-transform: translateY(-0px);
+            transform: translateY(-0px);
+  }
 }
 
 /* ---------- media querries ---------- */
