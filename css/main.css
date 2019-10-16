@@ -1,7 +1,7 @@
 /* ---------- root variables ---------- */
 :root {
   --background: #FFFF;
-  --text-dark: #808080;
+  --text-dark: #606060;
   --text-light: #BAB7B7;
   --myplants: #BCDBC2;
   --bassin7: #BCE9ED;
@@ -31,7 +31,7 @@ body {
 
 h1 {
   font-family: "Abril Fatface";
-  font-size: 2em;
+  font-size: 3em;
   font-weight: 300;
   letter-spacing: 3px;
   padding-top: 0px;
@@ -43,9 +43,17 @@ h2 {
   color: var(--text-dark);
   font-family: "Avenir Next";
     font-size: 1.5em;
-    font-weight: 300;
+    font-weight: 200;
     letter-spacing: 3px;
+    margin-block-end: 0;
+}
 
+h3 {
+  font-size: 2em;
+  font-weight: 300;
+  color: var(--text-dark);
+  text-align: center;
+  padding-top: 5%;
 }
 
 /* ---------- tabbar styling ---------- */
@@ -100,7 +108,7 @@ h2 {
   overflow: hidden;
   -webkit-animation: fadeIn 5s;
   animation: fadeIn 5s;
-  top: 20px;
+
 }
 
 .banner-elements {
@@ -159,7 +167,7 @@ h2 {
 }
 
 
-#banner-element-1, #banner-element-10 {
+#banner-element-1 {
   background-color: var(--rejsebogen);
 }
 
@@ -198,6 +206,7 @@ h2 {
 
 /*projects page styling*/
 
+
 #slideshow-container1 {
   background-color: var(--myplants);
 }
@@ -226,21 +235,27 @@ h2 {
   background-color: var(--rejsebogen);
 }
 
+
 #projects-page-heading {
-text-align: center;
+  text-align: center;
   background-color: white;
   font-size: 2.5em;
   padding-top: 5%;
+  animation: none;
 }
 
 /* Slideshow container */
 .slideshow-container {
-  width: 90%;
-  height: 60%;
+  width: 100vh;
+  height: 100%;
   margin: 5% auto;
   position: relative;
-  overflow: hidden;
   text-align: center;
+}
+
+.mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6, .mySlides7 {
+  display: none;
+  height: 60vh;
 }
 
 /* this class is used for the animation */
@@ -249,30 +264,29 @@ text-align: center;
   animation: slide-top-slideshow 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   }
 
-
 /* ---------- content in slideshow ---------- */
 
-h3 {
-  font-size: 2em;
-  font-weight: 300;
-  color: white;
-  text-align: center;
+
+
+.slideshow-text {
+  padding: 10%;
+  margin: 0 auto;
 }
 
+.slideshow-keywords {
+  font-weight: bolder;
+}
 
 .slide-images {
-  max-width: 50%;
+  max-width: 60%;
 }
 
 .slide-images-gif {
   width: 20%;
-  max-height: 10%;
-  padding: 5%;
+
 }
 
-.mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6, .mySlides7 {
-  display: none;
-}
+
 
 /* Next & previous buttons */
 .prev, .next {
@@ -283,9 +297,9 @@ h3 {
   width: auto;
   padding: 16px;
   margin-top: -22px;
-  color: white;
+  color: black;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 24px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
 }
@@ -410,6 +424,7 @@ h3 {
 /* big screens */
 @media screen and (min-width: 1120px) {
   .slideshow-container {
-    width: 60%;
+    width: 65%;
+    height: 100%;
   }
   }
