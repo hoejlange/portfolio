@@ -13,6 +13,10 @@ function showPage(pageId) {
   hideAllPages();
   document.querySelector(`#${pageId}`).style.display = "block";
   location.href = `#${pageId}`;
+  // run project animation function
+  if(pageId === 'projects') {
+    startAnimation();
+  }
   setActiveTab(pageId);
 }
 
@@ -67,7 +71,6 @@ function showSlides(n, no) {
 }
 
 //animation on image slideshow
-
 function startAnimation() {
   let elements;
   let windowHeight;
@@ -75,15 +78,21 @@ function startAnimation() {
   function init() {
     elements = document.querySelectorAll('.slideshow-container');
     windowHeight = window.innerHeight;
+    for (let i = 0; i < elements.length; i++) {
+      let element = elements[i];
+      if (element.classList.contains('slideup-animation')) {
+        element.classList.remove('slideup-animation');
+      }
+    }
   }
 
   function checkPosition() {
-    for (var i = 0; i < elements.length; i++) {
+    for (let i = 0; i < elements.length; i++) {
       let element = elements[i];
       let positionFromTop = elements[i].getBoundingClientRect().top;
 
-      if (positionFromTop - windowHeight <= 0) {
-        element.classList.add('.slideup-animation');
+      if (positionFromTop - windowHeight <= -200) {
+        element.classList.add('slideup-animation');
       }
     }
   }
@@ -94,4 +103,5 @@ function startAnimation() {
   init();
   checkPosition();
 };
+
 //
