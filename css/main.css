@@ -30,9 +30,9 @@ body {
 }
 
 h1 {
-  font-family: "Abril Fatface";
+  font-family: "Avenir Next";
   font-size: 3em;
-  font-weight: 300;
+  font-weight: 200;
   letter-spacing: 3px;
   padding-top: 0px;
   margin-top: 0;
@@ -50,10 +50,11 @@ h2 {
 
 h3 {
   font-size: 2em;
-  font-weight: 300;
+  font-weight: 200;
   color: var(--text-dark);
   text-align: center;
-  padding-top: 5%;
+  padding: 5%;
+  letter-spacing: 3px;
 }
 
 /* ---------- tabbar styling ---------- */
@@ -61,7 +62,7 @@ h3 {
   background-color: white;
   position: fixed;
   z-index: 9999;
-  bottom: 0;
+  top: 0;
   left: 0;
   right: 0;
   text-align: center;
@@ -74,10 +75,11 @@ h3 {
   text-align: center;
   padding: 20px 16px;
   text-decoration: none;
-  font-size: 0.8em;
+  font-size: 0.6em;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin: 0 auto;
+
 }
 
 /* Change the color of links on hover */
@@ -90,10 +92,17 @@ h3 {
   font-weight: bold;
 }
 
+/* Moves navbar to top on "about"-page */
+.about-tabbar {
+top: 280px;
+}
+
 /* ---------- page styling ---------- */
 .page {
   display: none;
   animation: fadeIn 0.4s;
+  max-width: 1700px;
+  margin: 0 auto
 }
 
 /*about page styling*/
@@ -108,7 +117,7 @@ h3 {
   overflow: hidden;
   -webkit-animation: fadeIn 5s;
   animation: fadeIn 5s;
-
+  margin: 0 auto;
 }
 
 .banner-elements {
@@ -120,8 +129,8 @@ h3 {
   vertical-align: middle;
 }
 
-
 .first {
+  background-color: var(--rejsebogen);
   -webkit-animation: bannerMove 50s linear infinite;
   animation: bannerMove 50s linear infinite;
 }
@@ -166,24 +175,23 @@ h3 {
 }
 }
 
-
-#banner-element-1, #banner-element-10 {
-  background-color: var(--rejsebogen);
+#banner-element-1-repeat  {
+  background-color: var(--rejsebogen) !important;
 }
 
-#banner-element-2 {
+#banner-element-2, #banner-element-2-repeat  {
   background-color: var(--amo);
 }
 
-#banner-element-3 {
+#banner-element-3, #banner-element-3-repeat  {
   background-color: var(--klimaspillet);
 }
 
-#banner-element-4, #banner-element-9 {
+#banner-element-4, #banner-element-4-repeat, #banner-element-9 {
   background-color: var(--pink);
 }
 
-#banner-element-5 {
+#banner-element-5, #banner-element-5-repeat {
   background-color: var(--bassin7);
 }
 
@@ -201,11 +209,10 @@ h3 {
 
 #about-article {
   text-align: center;
-  margin: 5% auto;
+  margin: 20vh auto;
 }
 
 /*projects page styling*/
-
 
 #slideshow-container1 {
   background-color: var(--myplants);
@@ -235,23 +242,35 @@ h3 {
   background-color: var(--rejsebogen);
 }
 
-
-#projects-page-heading {
-  text-align: center;
+#work-page-header {
+  height: 20vh;
+  width: 100%;
   background-color: white;
-  font-size: 2.5em;
-  padding-top: 5%;
+}
+
+#work-page-heading {
+  text-align: left;
+  font-size: 1em;
+  padding: 5%;
+  margin: 5% auto 5% auto;
   animation: none;
+  position: relative;
 }
 
 /* Slideshow container */
 .slideshow-container {
-  width: 100vw;
+  width: 65%;
   height: 100%;
   margin: 5% auto;
   position: relative;
   text-align: center;
   opacity: 0;
+}
+
+/* first slidecontainer */
+.slideshow-container-first {
+  margin: 0 auto;
+  opacity: 1;
 }
 
 .mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6, .mySlides7 {
@@ -269,17 +288,21 @@ h3 {
 
 /* ---------- content in slideshow ---------- */
 
-
-
 .slide-images {
-  max-width: 60%;
+  max-width: 45%;
 }
 
 .slide-images-gif {
   width: 20%;
-
 }
 
+.img-gif-container-myslides2 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
 .slideshow-text {
   padding: 5% 10%;
   margin: 0 auto;
@@ -296,11 +319,11 @@ h3 {
 }
 
 .github-text {
-opacity: 0;
+  opacity: 0;
 }
 
 .github-icon:hover .github-text {
-opacity: 1;
+  opacity: 1;
 }
 /* Next & previous buttons */
 .prev, .next {
@@ -311,8 +334,8 @@ opacity: 1;
   width: auto;
   padding: 16px;
   margin-top: -22px;
-  color: var(--text-dark);
-  font-weight: bold;
+  color: var(--text-light);
+  font-weight: 100;
   font-size: 24px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
@@ -405,8 +428,7 @@ opacity: 1;
  100% {
     margin-left: -2400px;
  }
-}
-
+  }
 @-webkit-keyframes bannerMove {
  0% {
     margin-left: 0px;
@@ -435,20 +457,42 @@ opacity: 1;
   h1 {
     font-size: 2em;
 }
+
+h2 {
+  margin-block-start: 0;
+}
+
+#about-article {
+margin: 5vh auto;
+}
 }
 
 /* tablet and down */
 @media screen and (max-width: 768px) {
-#about-article {
-  margin: 20% auto;
+
+.tabbar {
+  bottom: 0;
+  top: auto;
 }
 
+.slide-images {
+  max-width: 60%;
 }
 
-/* big screens */
-@media screen and (min-width: 1120px) {
+.mobile-gif {
+  width: 30%;
+}
+
+.img-gif-container-myslides2 {
+  flex-direction: column;
+}
+}
+
+@media screen and (max-width: 1120px) {
   .slideshow-container {
-    width: 65%;
+    width: 100vw;
     height: 100%;
   }
+
+
   }

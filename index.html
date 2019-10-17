@@ -9,12 +9,11 @@
   <meta name="author" content="Lærke Høj Lange">
   <link rel="stylesheet" href="css/main.css">
   <link rel="shortcut icon" type="image/png" href="img/ll-logo.png">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
   <!-- tabbar navigation -->
-  <nav class="tabbar">
+  <nav class="tabbar" id="tabbar">
     <a id="nav-element-1" href="#about" onclick="showPage('about')">about</a>
     <a id="nav-element-2" href="#work" onclick="showPage('work')">work</a>
     <a id="nav-element-3" href="#contact" onclick="showPage('contact')">contact</a>
@@ -23,8 +22,8 @@
   <!-- pages -->
   <!-- about page -->
   <section id="about" class="page">
-    <div id="banner">
-      <div onclick="showPage('work')" class="banner-elements first" id="banner-element-1">
+    <header id="banner">
+      <div onclick="showPage('work')" class="banner-elements first">
         <img class="banner-preview-no-hover banner-preview-img" src="img/rejsebogen-mockup1.png" alt="mockup">
         <img class="banner-preview-hover banner-preview-img" src="img/rejsebogen-mockup2.png" alt="mockup">
       </div>
@@ -60,22 +59,26 @@
       <div onclick="showPage('work')" class="banner-elements" id="banner-element-9">
         <p class="banner-preview-text">explore my work</p>
       </div>
-      <div onclick="showPage('work')" class="banner-elements" id="banner-element-1">
+      <div onclick="showPage('work')" class="banner-elements" id="banner-element-1-repeat">
         <img class="banner-preview-no-hover banner-preview-img" src="img/rejsebogen-mockup1.png" alt="mockup">
         <img class="banner-preview-hover banner-preview-img" src="img/rejsebogen-mockup2.png" alt="mockup">
       </div>
-      <div onclick="showPage('work')" class="banner-elements" id="banner-element-2">
+      <div onclick="showPage('work')" class="banner-elements" id="banner-element-2-repeat">
         <img class="banner-preview-img banner-preview-no-hover" src="img/amo-mockup1.png" alt="mockup">
         <img class="banner-preview-hover banner-preview-img" src="img/amo-mockup2.png" alt="mockup">
       </div>
-      <div onclick="showPage('work')" class="banner-elements" id="banner-element-3">
+      <div onclick="showPage('work')" class="banner-elements" id="banner-element-3-repeat">
         <img class="banner-preview-gif banner-preview-no-hover" src="img/klimaspillet.gif" alt="mockup">
         <img class="banner-preview-hover banner-preview-img" src="img/klimaspillet.png" alt="mockup">
       </div>
-      <div onclick="showPage('work')" class="banner-elements" id="banner-element-4">
+      <div onclick="showPage('work')" class="banner-elements" id="banner-element-4-repeat">
         <p class="banner-preview-text">explore my work</p>
       </div>
-    </div>
+      <div onclick="showPage('work')" class="banner-elements" id="banner-element-5-repeat">
+        <img class="banner-preview-hover banner-preview-gif" src="img/bassin7_mobile.gif" alt="mockup">
+        <img class="banner-preview-img banner-preview-no-hover" src="img/bassin7.png" alt="mockup">
+      </div>
+    </header>
     <article id="about-article">
       <h2>I'm</h2>
       <h1>Lærke Høj Lange</h1>
@@ -89,15 +92,17 @@
 
   <!-- projects page -->
   <section id="work" class="page">
-    <h1 id="projects-page-heading">Check out some of my work here</h1>
-    <div id="slideshow-container1" class="slideshow-container">
+    <div id="work-page-header">
+      <h1 id="work-page-heading">Check out some of my work</h1>
+    </div>
+    <div id="slideshow-container1" class="slideshow-container slideshow-container-first">
       <h3>My Plants</h3>
       <div class="mySlides1">
         <img class="slide-images" src="img/myplants.png" alt="mockup">
       </div>
 
       <div class="mySlides1">
-        <img class="slide-images-gif" src="img/myplants_mobile.gif" alt="mockup">
+        <img class="slide-images-gif mobile-gif" src="img/myplants_mobile.gif" alt="mockup">
       </div>
 
       <div class="mySlides1">
@@ -122,9 +127,10 @@
       </div>
 
       <div class="mySlides2">
-        <img class="slide-images" src="img/bassin7.png">
-        <img class="slide-images-gif" src="img/bassin7_mobile.gif" alt="mockup">
-
+        <div class="img-gif-container-myslides2">
+          <img class="slide-images" src="img/bassin7.png">
+          <img class="slide-images-gif" src="img/bassin7_mobile.gif" alt="mockup">
+        </div>
       </div>
 
       <div class="mySlides2">
@@ -147,7 +153,7 @@
       </div>
 
       <div class="mySlides3">
-        <img class="slide-images-gif" src="img/klimaspillet.gif" alt="mockup">
+        <img class="slide-images-gif mobile-gif" src="img/klimaspillet.gif" alt="mockup">
       </div>
 
       <div class="mySlides3">
@@ -180,7 +186,7 @@
         <p class="slideshow-text">A web documentary about the violinist, Silke Kidholm, a student at The Royal Academy of Music in Aarhus. The webpage tells a story about the violinist and displays images, videos and info about her three different
           music projects.
           <br>Created with HTML, CSS, and JavaScript.</p>
-        <p class="slideshow-keywords">Keywords: Storytelling, Interactivity, Content Creation
+        <p class="slideshow-keywords">Keywords: Storytelling, Interactivity, CSS Animations, Content Creation
         </p>
         <a href="https://github.com/fiejohannsen/webdocumentary" target="_blank"><img class="github-icon" src="img/github-grey.svg" alt="github icon"></a>
         <p class="github-text">Github Repository</p>
@@ -258,8 +264,6 @@
       <a class="prev" onclick="plusSlides(-1, 6)">&#10094;</a>
       <a class="next" onclick="plusSlides(1, 6)">&#10095;</a>
     </div>
-
-
   </section>
 
   <!-- contact page -->

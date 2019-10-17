@@ -17,7 +17,23 @@ function showPage(pageId) {
   if(pageId === 'work') {
     startAnimation();
   }
+  if(pageId === 'about') {
+    moveNavbar();
+  } else {
+    resetNavbar();
+  }
   setActiveTab(pageId);
+
+}
+
+function moveNavbar() {
+  let navbar = document.getElementById("tabbar");
+  navbar.classList.add("about-tabbar");
+}
+
+function resetNavbar() {
+  let navbar = document.getElementById("tabbar");
+  navbar.classList.remove("about-tabbar");
 }
 
 // sets active tabbar/ menu item
