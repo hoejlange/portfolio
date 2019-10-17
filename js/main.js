@@ -14,7 +14,7 @@ function showPage(pageId) {
   document.querySelector(`#${pageId}`).style.display = "block";
   location.href = `#${pageId}`;
   // run project animation function
-  if(pageId === 'projects') {
+  if(pageId === 'work') {
     startAnimation();
   }
   setActiveTab(pageId);

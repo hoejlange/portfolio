@@ -3,14 +3,14 @@
   --background: #FFFF;
   --text-dark: #606060;
   --text-light: #BAB7B7;
-  --myplants: #BCDBC2;
-  --bassin7: #BCE9ED;
-  --pink: #F4C6E9;
-  --klimaspillet: #C5DEBC;
-  --silkeKidholm: #C4C5C3;
-  --amo: #D6CCBF;
-  --hq: #E5D5BA;
-  --rejsebogen: #BDCAE0;
+  --myplants: #EDF4EE;
+  --bassin7: #EDF7F6;
+  --pink: #FDE0F6;
+  --klimaspillet: #EEFCED;
+  --silkeKidholm: #f4f4f4;
+  --amo: #f4f0ed;
+  --hq: #fcf5ef;
+  --rejsebogen: #EFF5F7;
 }
 
 /* ---------- general styling ---------- */
@@ -167,7 +167,7 @@ h3 {
 }
 
 
-#banner-element-1 {
+#banner-element-1, #banner-element-10 {
   background-color: var(--rejsebogen);
 }
 
