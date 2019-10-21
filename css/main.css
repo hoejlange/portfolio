@@ -285,12 +285,11 @@ h3 {
   background-color: white;
 }
 
-#work-page-heading {
+#work-page-heading  {
   text-align: left;
   font-size: 1em;
   padding: 5%;
   margin: 5% auto 5% auto;
-  animation: none;
   position: relative;
 }
 
@@ -398,6 +397,72 @@ h3 {
   background-color: #f1f1f1;
   color: var(--text-dark);
 }
+
+/* ---------- contact page styling ---------- */
+#contact {
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  top: 54px;
+  width: 100%;
+  position: relative;
+
+}
+
+.contact-text-container {
+  width: 50%;
+  padding-top: 15%;
+}
+
+#contact-page-heading  {
+  text-align: center;
+  font-size: 1em;
+  position: relative;
+
+}
+
+#contact-table {
+  margin: auto;
+  padding: 5% 0 0 10%;
+  font-size: 0.8em;
+  border-spacing: 40px 5px;
+}
+
+#contact-table a {
+  text-decoration: none;
+  color: var(--text-dark);
+}
+
+#contact-table a:hover {
+  font-weight: 300;
+}
+
+
+.contact-img-container {
+  width: 50%;
+  height: 100%;
+
+
+}
+
+.contact-img {
+  width: 100%;
+  height: auto;
+}
+
+#contact-img-tablet {
+  display: none;
+}
+
+#contact-img-desktop {
+  display: block;
+}
+
 
 /* ---------- animations ---------- */
 /* fade in .page */
@@ -524,6 +589,38 @@ margin: 5vh auto;
 .img-gif-container-myslides2 {
   flex-direction: column;
 }
+
+.contact-container {
+  flex-direction: column-reverse;
+  top: 0;
+  bottom: 54px;
+}
+
+.contact-text-container {
+  width: 100%;
+  height: 50%
+}
+
+.contact-img-container {
+  width: 100%;
+  height: 50%;
+}
+
+.contact-img {
+  width: auto;
+height: 50vh;
+margin: 0 auto;
+}
+
+#contact-img-desktop {
+  display: none;
+}
+
+#contact-img-tablet {
+  display: block
+}
+
+
 }
 
 @media screen and (max-width: 1120px) {
