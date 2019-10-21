@@ -47,7 +47,6 @@ h2 {
     letter-spacing: 3px;
     margin-block-end: 0;
 }
-
 h3 {
   font-size: 2em;
   font-weight: 200;
@@ -66,6 +65,8 @@ h3 {
   left: 0;
   right: 0;
   text-align: center;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 /* Style the links inside the navigation bar */
@@ -94,15 +95,16 @@ h3 {
 
 /* Moves navbar to top on "about"-page */
 .about-tabbar {
-top: 280px;
+  top: 280px;
 }
 
 /* ---------- page styling ---------- */
 .page {
   display: none;
   animation: fadeIn 0.4s;
-  max-width: 1700px;
-  margin: 0 auto
+  max-width: 1920px;
+  margin: 0 auto;
+  height: auto;
 }
 
 /*about page styling*/
@@ -127,6 +129,7 @@ top: 280px;
   cursor: pointer;
   display: inline-block;
   vertical-align: middle;
+  background-color: var(--rejsebogen);
 }
 
 .first {
@@ -143,8 +146,12 @@ top: 280px;
 
 .banner-preview-gif {
   max-width: 40%;
-  transition: .5s ease;
   padding-top: 10%;
+}
+
+.top-padding {
+  padding-top: 33%;
+    max-width: 90%;
 }
 
 .banner-preview-hover {
@@ -154,19 +161,17 @@ top: 280px;
 
 .banner-elements:hover .banner-preview-hover {
   display: inline-block;
-
 }
 
 .banner-elements:hover .banner-preview-no-hover {
   display: none;
-
 }
 
 .banner-preview-text {
   font-family: "Abril fatface";
   color: var(--background);
   font-size: 1.5em;
-  padding-top: 30%;
+  padding-top: 32%;
   }
 
 .banner-preview-text:hover {
@@ -175,7 +180,7 @@ top: 280px;
 }
 }
 
-#banner-element-1-repeat  {
+#banner-element-1  {
   background-color: var(--rejsebogen) !important;
 }
 
@@ -195,7 +200,7 @@ top: 280px;
   background-color: var(--bassin7);
 }
 
-#banner-element-6 {
+#banner-element-6, #banner-element-6-repeat {
   background-color: var(--silkeKidholm);
 }
 
@@ -209,7 +214,7 @@ top: 280px;
 
 #about-article {
   text-align: center;
-  margin: 20vh auto;
+  margin: 15vh auto;
 }
 
 /*projects page styling*/
@@ -314,6 +319,7 @@ top: 280px;
 
 .github-icon {
   width: 5%;
+  padding: 5%;
   animation: fadeIn 4s;
   -webkit-animation: fadeIn 4s;
 }
