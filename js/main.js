@@ -23,8 +23,14 @@ function showPage(pageId) {
     resetNavbar();
   }
   setActiveTab(pageId);
-
 }
+
+//hide popup window on onclick
+function hidePopup() {
+  let popup = document.querySelectorAll(".fullscreen-popup");
+    popup.style.display = "none";
+  }
+
 
 function moveNavbar() {
   let navbar = document.getElementById("tabbar");
