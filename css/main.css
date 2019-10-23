@@ -56,38 +56,6 @@ h3 {
   letter-spacing: 3px;
 }
 
-/* ---------- welcome popup window styling ----------
-.fullscreen-popup {
-  width: 100%;
-  height: 100%;
-  z-index: 999;
-  position: fixed;
-  background-image: url("../img/laerke.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.popup-h1 {
-  font-family: "Abril Fatface";
-  font-size: 10em;
-  text-align: center;
-  width: 100%;
-  color: #FFFF;
-}
-
-.popup-button {
-  margin-top: 50%;
-  margin-left: 50%;
-  background: #FFFF;
-  color: var(--pink);
-  border: none;
-  height: 8%;
-  width: 200px;
-  margin: 40%;
-}
-*/
-
 /* ---------- tabbar styling ---------- */
 .tabbar {
   background-color: white;
@@ -183,7 +151,7 @@ h3 {
 
 .top-padding {
   padding-top: 33%;
-    max-width: 90%;
+  max-width: 90%;
 }
 
 .banner-preview-hover {
@@ -311,7 +279,11 @@ h3 {
 
 .mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6, .mySlides7 {
   display: none;
-  height: 60vh;
+  height: 55vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10%;
 }
 
 /* this class is used for the animation */
@@ -328,6 +300,10 @@ h3 {
   max-width: 45%;
 }
 
+.slide-images-bigger {
+  max-width: 70%;
+}
+
 .slide-images-gif {
   width: 20%;
 }
@@ -336,6 +312,7 @@ h3 {
   width: 100%;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
@@ -555,7 +532,7 @@ h3 {
 
 /* Iphone 5 - 6 */
 @media screen and (max-width: 414px) {
-  h1 {
+h1 {
     font-size: 2em;
 }
 
@@ -564,8 +541,12 @@ h2 {
 }
 
 #about-article {
-margin: 5vh auto;
+  margin: 5vh auto;
 }
+.img-gif-container-myslides2 {
+  flex-direction: column;
+}
+
 }
 
 /* tablet and down */
@@ -584,9 +565,6 @@ margin: 5vh auto;
   width: 30%;
 }
 
-.img-gif-container-myslides2 {
-  flex-direction: column;
-}
 
 .contact-container {
   flex-direction: column-reverse;

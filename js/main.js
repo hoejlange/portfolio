@@ -25,13 +25,6 @@ function showPage(pageId) {
   setActiveTab(pageId);
 }
 
-//hide popup window on onclick
-function hidePopup() {
-  let popup = document.querySelectorAll(".fullscreen-popup");
-    popup.style.display = "none";
-  }
-
-
 function moveNavbar() {
   let navbar = document.getElementById("tabbar");
   navbar.classList.add("about-tabbar");
@@ -89,7 +82,7 @@ function showSlides(n, no) {
   for (i = 0; i < x.length; i++) {
      x[i].style.display = "none";
   }
-  x[slideIndex[no]-1].style.display = "block";
+  x[slideIndex[no]-1].style.display = "flex";
 }
 
 //animation on image slideshow
