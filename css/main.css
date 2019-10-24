@@ -76,7 +76,7 @@ font-size: 14px;
   margin: 0 auto;
 }
 
-/* Style the links inside the navigation bar */
+/* links inside the navigation bar */
 .tabbar a {
   display: inline-block;
   color: var(--text-dark);
@@ -90,13 +90,13 @@ font-size: 14px;
 
 }
 
-/* Change the color of links on hover */
+/* Changes links on hover */
 .tabbar a:hover {
   font-weight: bold;
   transition: 0.5s;
 }
 
-/* Add a color to the active/current link */
+/* Adds styling to the active/current link */
 .tabbar a.active {
   font-weight: bold;
 }
@@ -225,7 +225,7 @@ font-size: 14px;
   margin: 15vh auto;
 }
 
-/*projects page styling*/
+/* work page styling */
 
 #slideshow-container1 {
   background-color: var(--myplants);
@@ -279,7 +279,7 @@ font-size: 14px;
   opacity: 0;
 }
 
-/* first slidecontainer */
+/* first slideshow container */
 .slideshow-container-first {
   margin: 0 auto;
   opacity: 1;
@@ -294,7 +294,7 @@ font-size: 14px;
   padding-bottom: 10%;
 }
 
-/* this class is used for the animation */
+/* class is used for the animation */
 .slideup-animation {
   opacity: 1;
   transition: linear 1s;
@@ -375,6 +375,8 @@ font-size: 14px;
   overflow: hidden;
   display: flex;
   align-items: center;
+  animation: fadeIn 1.5s;
+
 }
 
 .contact-container {
