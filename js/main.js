@@ -23,6 +23,9 @@ function showPage(pageId) {
     resetNavbar();
   }
   setActiveTab(pageId);
+  setTimeout(function() {
+    showLoader(false);
+  }, 500);
 }
 
 function moveNavbar() {
@@ -45,6 +48,15 @@ function setActiveTab(pageId) {
       page.classList.remove("active");
     }
 
+  }
+}
+
+function showLoader(show) {
+  let loader = document.querySelector('#loader');
+  if (show) {
+    loader.classList.remove("hide");
+  } else {
+    loader.classList.add("hide");
   }
 }
 
