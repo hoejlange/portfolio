@@ -298,8 +298,8 @@ font-size: 14px;
 .slideup-animation {
   opacity: 1;
   transition: linear 1s;
-  -webkit-animation: slide-top-slideshow 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  animation: slide-top-slideshow 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  -webkit-animation: slide-top-slideshow 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-top-slideshow 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   }
 
 /* ---------- content in slideshow ---------- */
@@ -596,13 +596,12 @@ h2 {
 }
 
 #banner {
-  height: 200px;
-  margin-top: 8%;
+  height: 180px;
 }
 
 .banner-elements {
-  height: 200px;
-  width: 200px;
+  height: 180px;
+  width: 180px;
 }
 
 .banner-preview-text {
@@ -629,6 +628,11 @@ p {
 
 .mobile-gif {
   width: 30%;
+}
+
+.slideup-animation {
+  -webkit-animation: none;
+  animation: none;
 }
 
 
