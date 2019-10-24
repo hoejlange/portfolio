@@ -16,23 +16,26 @@
 /* ---------- general styling ---------- */
 html {
   color: var(--text-dark);
-  font-family: "Abril Fatface", "Avenir Next";
+  font-family: 'Abril Fatface', 'Work Sans', sans-serif;
   height: 100%;
   width: 100%;
   font-weight: 200;
+  line-height: 1.6;
+  letter-spacing: 1.1px;
 }
 
 body {
   background-color: var(--background);
   margin: 0;
   top: 0;
-  font-family: "Avenir Next";
+  font-family: 'Work Sans', sans-serif;
+
 }
 
 h1 {
-  font-family: "Avenir Next";
-  font-size: 3em;
-  font-weight: 200;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 2em;
+  font-weight: 100;
   letter-spacing: 3px;
   padding-top: 0px;
   margin-top: 0;
@@ -41,21 +44,25 @@ h1 {
 }
 h2 {
   color: var(--text-dark);
-  font-family: "Avenir Next";
+  font-family: 'Work Sans', sans-serif;
     font-size: 1.5em;
-    font-weight: 200;
+    font-weight: 100;
     letter-spacing: 3px;
     margin-block-end: 0;
 }
 h3 {
-  font-size: 2em;
-  font-weight: 200;
+  font-size: 2.6em;
+  font-weight: 100;
   color: var(--text-dark);
   text-align: center;
-  padding: 5%;
+  padding-top: 10%;
   letter-spacing: 3px;
 }
 
+p {
+
+font-size: 14px;
+}
 /* ---------- tabbar styling ---------- */
 .tabbar {
   background-color: white;
@@ -76,7 +83,7 @@ h3 {
   text-align: center;
   padding: 20px 16px;
   text-decoration: none;
-  font-size: 0.6em;
+  font-size: 0.7em;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin: 0 auto;
@@ -86,6 +93,7 @@ h3 {
 /* Change the color of links on hover */
 .tabbar a:hover {
   font-weight: bold;
+  transition: 0.5s;
 }
 
 /* Add a color to the active/current link */
@@ -255,7 +263,7 @@ h3 {
 
 #work-page-heading  {
   text-align: left;
-  font-size: 1em;
+  font-size: 1.2em;
   padding: 5%;
   margin: 5% auto 5% auto;
   position: relative;
@@ -322,23 +330,9 @@ h3 {
 }
 
 .slideshow-keywords {
-  font-weight: bolder;
+  font-weight: 300;
 }
 
-.github-icon {
-  width: 5%;
-  padding: 5%;
-  animation: fadeIn 4s;
-  -webkit-animation: fadeIn 4s;
-}
-
-.github-text {
-  opacity: 0;
-}
-
-.github-icon:hover .github-text {
-  opacity: 1;
-}
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
@@ -402,23 +396,31 @@ h3 {
 
 #contact-page-heading  {
   text-align: center;
-  font-size: 1em;
+  font-size: 1.2em;
   position: relative;
-}
+      padding-top: 1%;
+
+    }
 
 #contact-table {
   padding: 5% 0 0 10%;
   font-size: 0.8em;
-  border-spacing: 40px 5px;
+  border-spacing: 40px 10px;
+}
+
+.contact-list-left {
+  text-align: right;
 }
 
 #contact-table a {
   text-decoration: none;
   color: var(--text-dark);
+  font-weight: 200;
 }
 
 #contact-table a:hover {
-  font-weight: 300;
+  font-weight: bolder;
+  ;
 }
 
 .contact-img-container {
@@ -547,10 +549,17 @@ h2 {
   flex-direction: column;
 }
 
+.contact-img {
+width: 100%;
+}
+
 }
 
 /* tablet and down */
 @media screen and (max-width: 768px) {
+p {
+  font-size: 13px;
+}
 
 .tabbar {
   bottom: 0;
@@ -581,6 +590,10 @@ h2 {
   padding-top: 10%;
 }
 
+#contact-table a {
+  font-weight: 300;
+}
+
 #contact-page-heading {
   margin-bottom: 0;
 }
@@ -594,10 +607,9 @@ h2 {
 }
 
 .contact-img {
-width: 70%;
+width: 100%;
 max-width: 100%;
 max-height: 70%;
-
 }
 
 #contact-img-desktop {
