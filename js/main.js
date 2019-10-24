@@ -125,7 +125,7 @@ function startAnimation() {
   }
 
   window.addEventListener('scroll', checkPosition);
-  window.addEventListener('resize', init);
+
 
   init();
   checkPosition();
