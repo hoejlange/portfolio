@@ -463,21 +463,6 @@ font-size: 14px;
   }
 }
 
-/* scale in headlines */
-@keyframes scaleIn {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(0);
-    transform: scale(0)
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1)
-  }
-}
-
 /* scale up text on hover in banner */
 @-webkit-keyframes scale-up {
   0% {
@@ -519,6 +504,17 @@ font-size: 14px;
 }
 
 /* slide up slideshow containers */
+@keyframes slide-top-slideshow {
+  0% {
+    -webkit-transform: translateY(500px);
+            transform: translateY(500px);
+  }
+  100% {
+    -webkit-transform: translateY(-0px);
+            transform: translateY(-0px);
+  }
+}
+
 @-webkit-keyframes slide-top-slideshow {
   0% {
     -webkit-transform: translateY(500px);
