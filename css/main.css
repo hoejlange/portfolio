@@ -547,8 +547,19 @@ h2 {
   flex-direction: column;
 }
 
-.contact-img {
-width: 100%;
+#banner {
+  height: 200px;
+  margin-top: 8%;
+}
+
+.banner-elements {
+  height: 200px;
+  width: 200px;
+}
+
+.banner-preview-text {
+  font-size: 1em;
+  padding-top: 33%;
 }
 
 }
