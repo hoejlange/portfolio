@@ -305,7 +305,7 @@ font-size: 14px;
 /* ---------- content in slideshow ---------- */
 
 .slide-images {
-  max-width: 45%;
+  max-width: 65%;
 }
 
 .slide-images-bigger {
@@ -623,7 +623,7 @@ p {
 }
 
 .slide-images {
-  max-width: 60%;
+  max-width: 70%;
 }
 
 .mobile-gif {
